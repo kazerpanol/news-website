@@ -1,0 +1,36 @@
+@import './resets';
+@import './variables';
+
+
+@mixin flex($direction, $justify){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+
+nav{
+    ul{
+        @include flex(coloumn, flex-end );
+    li{
+        list-style: none;
+        padding: 1rem 0.5rem;
+    }
+    }
+
+}
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+
+
+        .grid-item{
+            background-color: tomato;
+            border:2px solid
+         
+        }
+    }
+}

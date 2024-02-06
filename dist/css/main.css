@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+body nav ul {
+  display: flex;
+  flex-direction: coloumn;
+  justify-content: flex-end;
+}
+body nav ul li {
+  list-style: none;
+  padding: 1rem 0.5rem;
+}
+body .wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+body .wrapper .grid-item {
+  background-color: tomato;
+  border: 2px solid;
+}
