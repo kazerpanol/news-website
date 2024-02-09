@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: "Inter", sans-serif;
   width: 100%;
   margin: 0 auto;
   padding: 1rem 1rem;
@@ -55,4 +56,23 @@ body .news .new-title {
 }
 body .news .new-title p {
   font-size: 0.9rem;
+}
+body .bottom .bot-item {
+  display: flex;
+  align-items: center;
+}
+body .bottom .bot-item .pc-image {
+  height: 150px;
+}
+body .bottom .bot-item .text {
+  line-height: 2rem;
+  padding: 0 1.5rem;
+}
+body .bottom .bot-item .text .num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #b3b3b3;
+}
+body .bottom .bot-item .text h3 {
+  font-weight: 800;
 }

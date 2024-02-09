@@ -8,6 +8,7 @@
     justify-content: $justify;
 }
 body{
+    font-family: 'Inter', sans-serif;
     width: 100%;
     margin: 0 auto;
     padding: $xs $xs;
@@ -63,4 +64,25 @@ nav{
         }  
          }
     }
+.bottom{
+    .bot-item{
+        display: flex;
+        align-items: center;
+        .pc-image{
+            height: 150px;
+        }
+       .text{
+        line-height: 2rem;
+        padding: 0 1.5rem;
+        .num{
+            font-size: 1.5rem;
+            font-weight:800;
+            color:$text-lighten;
+        }
+        h3{
+            font-weight: 800;
+        }
+       }
+    }
+}
 }
