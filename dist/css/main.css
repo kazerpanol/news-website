@@ -12,8 +12,12 @@ body {
 }
 body .grid {
   display: grid;
-  border: 1px solid black;
-  grid-gap: 3rem;
+  grid-gap: 5rem;
+}
+body h1 {
+  color: #00001a;
+  font-weight: 800;
+  padding: 1rem 0;
 }
 body nav {
   padding: 10px;
@@ -38,6 +42,19 @@ body .hero img {
   height: 500px;
   width: 100%;
 }
+body .hero button {
+  padding: 10px 25px;
+  letter-spacing: 3px;
+  color: white;
+  background-color: rgb(255, 65, 65);
+  border: none;
+  font-weight: bolder;
+}
+body .hero p {
+  line-height: 2rem;
+  padding-bottom: 1rem;
+  color: rgb(75, 75, 75);
+}
 body .news {
   padding: 1.25rem;
   color: white;
@@ -57,21 +74,31 @@ body .news .new-title {
 body .news .new-title p {
   font-size: 0.9rem;
 }
+body .bottom {
+  display: flex;
+  flex-direction: column;
+}
 body .bottom .bot-item {
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
+  color: #00001a;
 }
 body .bottom .bot-item .pc-image {
-  height: 150px;
+  height: 175px;
 }
 body .bottom .bot-item .text {
   line-height: 2rem;
   padding: 0 1.5rem;
+  font-size: 1.5re;
 }
 body .bottom .bot-item .text .num {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  color: #b3b3b3;
+  color: #8a8a8a;
+}
+body .bottom .bot-item .text p {
+  color: rgb(75, 75, 75);
 }
 body .bottom .bot-item .text h3 {
   font-weight: 800;
