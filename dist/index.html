@@ -9,16 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="/script.js"></script>
   
+
   <title>Frontend Mentor | News homepage</title>
 </head>
 <body>
   <nav>
     <div class="overlay">
       <div class="menu-container">
-      
             <img class="close" src="../assets/images/icon-menu-close.svg" alt="close_btn">
-       
           <ul>
             <li>Home</li>
             <li>New</li>
@@ -30,7 +30,7 @@
   
     </div>
     <img src="../assets/images/logo.svg" class="logo" alt="logo">
-    <button><img src="../assets/images/icon-menu.svg" class="ham" alt="hamburger"></button>
+    <button class="menu-btn"><img src="../assets/images/icon-menu.svg" class="ham" alt="hamburger"></button>
   </nav>
 
   <div></div>
@@ -95,8 +95,24 @@
     <p>What happends when old PC's are<span></span>
       are given modern upgrades?</p>
  </div>
+</div>
+</div>
+<script type="text/javascript">
+
+  const btnMenu = document.querySelector('.menu-btn')
+  const btnclose = document.querySelector('.close')
+  const overlay = document.querySelector('.overlay')
  
-</div>
-</div>
+ btnMenu.addEventListener('click', function() {
+     // Your code to be executed when the button is clicked
+     overlay.classList.add('show-overlay');
+     console.log('you click')
+   });
+
+   btnclose.addEventListener('click', function() {
+     overlay.classList.remove('show-overlay');
+   });
+ </script>
+ 
 </body>
 </html>
