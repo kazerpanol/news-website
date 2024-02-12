@@ -28,15 +28,37 @@ body nav .logo {
   height: 30px;
   width: 50px;
 }
-body nav ul {
+body nav .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body nav .menu-container {
+  position: absolute;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background-color: white;
+}
+body nav .menu-container .close {
+  position: fixed;
+  right: 20px;
+  top: 40px;
+}
+body nav .menu-container ul {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  display: none;
+  justify-content: justify-content;
 }
-body nav ul li {
+body nav .menu-container li {
   list-style: none;
-  padding: 1rem 0.5rem;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: #00001a;
 }
 body .hero img {
   height: 500px;
@@ -84,22 +106,22 @@ body .bottom .bot-item {
   align-items: center;
   color: #00001a;
 }
-body .bottom .bot-item .pc-image {
+body .bottom .pc-image {
   height: 175px;
 }
-body .bottom .bot-item .text {
+body .bottom .text {
   line-height: 2rem;
   padding: 0 1.5rem;
   font-size: 1.5re;
 }
-body .bottom .bot-item .text .num {
+body .bottom .num {
   font-size: 2.5rem;
   font-weight: 800;
   color: #8a8a8a;
 }
-body .bottom .bot-item .text p {
+body .bottom p {
   color: rgb(75, 75, 75);
 }
-body .bottom .bot-item .text h3 {
+body .bottom h3 {
   font-weight: 800;
 }
