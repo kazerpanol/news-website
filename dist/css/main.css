@@ -64,6 +64,11 @@ body nav .menu-container li {
   font-weight: 500;
   color: #00001a;
 }
+body nav .menu-btn {
+  background-color: transparent;
+  height: 4rem;
+  border: none;
+}
 body .hero img {
   height: 500px;
   width: 100%;
@@ -91,6 +96,7 @@ body .news hr {
 }
 body .news h2 {
   padding-bottom: 1rem;
+  color: #dba65a;
 }
 body .news .new-title {
   line-height: 1.5rem;
@@ -128,4 +134,25 @@ body .bottom p {
 }
 body .bottom h3 {
   font-weight: 800;
+}
+
+@media only screen and (min-width: 1025px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 325px);
+    gap: 10px;
+  }
+  .grid .hero {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  .grid .news {
+    grid-column: 4/5;
+  }
+  .grid .bottom {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/5;
+    grid-row: 3/4;
+  }
 }
