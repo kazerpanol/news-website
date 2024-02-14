@@ -1,3 +1,9 @@
 @mixin paddings-top($value){
     padding: 0 $value;
 }
+
+@mixin regular-font(){
+   color: $primary-color;
+   font-size: 1rem;
+   font-weight: map-get($font-weights ,regular);
+}

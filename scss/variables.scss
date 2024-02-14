@@ -3,13 +3,16 @@ $accent-color:#00001a;
 $text-color:#ffff;
 $text-lighten:#8a8a8a;
 $font-weights:(
+    "light": 200,
     "regular": 400,
     "medium": 500,
     "large": 700
 );
 
+$font-large:5rem;
 $font-header:1.5rem;
 $font-subheader:1.25rem;
+
 
 $xs:1rem;
 $s:2rem;
