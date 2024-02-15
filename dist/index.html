@@ -11,25 +11,33 @@
   <script type="text/javascript" src="/script.js"></script>
   <title>Frontend Mentor | News homepage</title>
 </head>
-
 <body>
   <nav>
     <nav>
       <img src="../assets/images/logo.svg" class="logo" alt="logo">
-    
-        <ul>
-          <li><a>Home</a></li>
-          <li><a>New</a></li>
-          <li><a>Popular</a></li>
-          <li><a>Trending</a></li>
-          <li><a>Categorie</a>s</li>
-        </ul>
+      <div class="overlay">
+        <div class="menu-container">
+              <img class="close" src="../assets/images/icon-menu-close.svg" alt="close_btn">
+            <ul>
+              <li>Home</li>
+              <li>New</li>
+              <li>Popular</li>
+              <li>Trending</li>
+              <li>Categories</li>
+            </ul>
+        </div>
+      </div>
+      <button class="menu-btn"><img src="../assets/images/icon-menu.svg" class="ham" alt="hamburger"></button>
 
     </nav>
   </nav>
   <div class="grid">
     <div class="item1">
-      <img src="../assets/images/image-web-3-desktop.jpg" class="banner" alt="banner"> 
+      <picture>
+        <source media="(max-width: 1100px)" srcset="../assets/images/image-web-3-mobile.jpg">
+        <img src="../assets/images/image-web-3-desktop.jpg" class="banner" alt="banner"> 
+      </picture>
+    
     </div>
     <div class="item2"> 
         <h2>New</h2>
@@ -84,8 +92,25 @@
     </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io/profile/kazerpanol" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://www.frontendmentor.io/profile/kazerpanol">Kazer Panol</a>.
+      Coded by <a href="#">Kazer Panol</a>.
     </div>
+
+    <script type="text/javascript">
+
+      const btnMenu = document.querySelector('.menu-btn')
+      const btnclose = document.querySelector('.close')
+      const overlay = document.querySelector('.overlay')
+     
+     btnMenu.addEventListener('click', function() {
+         overlay.classList.add('show-overlay');
+         console.log('you click')
+       });
+    
+       btnclose.addEventListener('click', function() {
+         overlay.classList.remove('show-overlay');
+         console.log('you close')
+       });
+     </script>
 
 </body>
 
