@@ -12,6 +12,7 @@ body{
     width: 100%;
     margin: 0 auto;
     padding:  $xs $l;
+    font-size: $font-regular;
 }
 nav{
     width: 100%;
@@ -24,6 +25,9 @@ nav{
     li{
         padding: 1rem;
         @include regular-font;
+        &:hover{
+            color: $text-pink;
+        }
     }
    }  
 }
@@ -33,8 +37,9 @@ nav{
     margin: 0 auto;   
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,350px);
-    grid-gap: 1rem;
+    grid-template-rows: repeat(3,auto);
+   grid-row-gap: 4rem;
+   grid-column-gap: 1.5rem; 
 }
 .item1{
     background-color: tan;
@@ -43,13 +48,37 @@ nav{
         width: 100%;
         height: 100%;
     }
-
 }
 .item2{
-    background-color: rgb(233, 68, 26);
+    line-height: $font-regular*2;
+    padding: $s;
+    color: aliceblue;
+    background-color: $accent-color;
     grid-column: 3/4;
     grid-row: 1/3;
-
+  
+    h2{
+        font-weight: map-get($font-weights , large );
+        font-size: 3rem;
+        color: $text-yellow;
+    }
+    h3{
+        margin-top: 2rem;
+        font-weight: map-get($font-weights, large );
+        font-size: $font-header;
+        &:hover{
+            color:$text-yellow;
+            cursor: pointer;
+        }
+    }
+    p{
+        font-size: $font-regular;
+        font-weight: map-get($font-weights, light );
+    }
+    hr{
+        margin-top: 2rem;
+    }
+    
 }
 .item3{
     font-size: $font-large;
@@ -59,23 +88,76 @@ nav{
   
 }
 .item4{
-    background-color: rgb(70, 217, 57);
     grid-column: 2/3;
+    font-size: $font-regular;
+    line-height: 2rem;
+    color:rgb(75, 75, 75);
+    
+    button{
+        padding: 15px 30px;
+        letter-spacing: 3px;
+        color:white;
+        background-color: $text-pink;
+        font-weight: bolder;
+        display: block;
+        border: none;
+        margin-top: 3rem;
+        &:hover{
+            background-color: $accent-color;
+        }
+    }
 }
 .item5{
-    background-color: rgb(231, 141, 23);
     grid-column: 1/4;
-}
+    display: flex;
+    flex-wrap: wrap;
 
-@media only screen and (max-width: 900px) {
- nav{
-    background-color: tomato;
- 
- }
+        .bot-item
+        {
+        width:33%;
+        min-width:400px;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        color: $accent-color;
+          } .pc-image
+          {
+            height: 175px;
+        }
+       .text{
+        line-height: 2rem;
+        padding: 0 1.5rem;
+        &:hover{
+            color: $text-pink;
+        }
+     
+       }.num{
+            font-size: 2.5rem;
+            font-weight:800;
+            color:$text-lighten;
+        }
+        p{
+            color:rgb(75, 75, 75);
+        }
+        h3{
+            font-weight: 800;
+        }
+       }
+       .attribution
+        { 
+        font-size: 11px; 
+        text-align: center;
+           }
+
+@media only screen and (max-width: 1100px) {
+body{
+    padding: $s;
+}
  .grid{
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5,1fr);
-    grid-gap: 1rem;
+    grid-template-rows: repeat(5,auto);
+    grid-gap: 5rem;
     .item1{
        grid-column: 1/2;
        grid-row: 1/2;
@@ -87,6 +169,7 @@ nav{
     .item3{
         grid-column: 1/2;
         grid-row: 2/3;
+        font-size: $font-medium;
       
     }
     .item4{
@@ -96,6 +179,11 @@ nav{
     .item5{
         grid-column: 1/2;
         grid-row: 5/6;
+        .bot-item
+        {
+        width:100%;
+ 
+          }
        
     }
 }
