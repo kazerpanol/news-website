@@ -61,6 +61,9 @@ nav {
   justify-content: space-between;
   padding: 0.5rem 0;
 }
+nav .menu-container {
+  display: block;
+}
 nav .close {
   display: none;
 }
@@ -205,9 +208,6 @@ nav ul li:hover {
     padding: 2rem;
   }
   nav .menu-btn {
-    display: block;
-  }
-  nav .show-overlay {
     display: block;
   }
   nav .overlay {

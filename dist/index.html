@@ -18,7 +18,7 @@
       <div class="overlay">
         <div class="menu-container">
               <img class="close" src="../assets/images/icon-menu-close.svg" alt="close_btn">
-            <ul>
+            <ul>  
               <li>Home</li>
               <li>New</li>
               <li>Popular</li>
@@ -96,19 +96,15 @@
     </div>
 
     <script type="text/javascript">
-
       const btnMenu = document.querySelector('.menu-btn')
       const btnclose = document.querySelector('.close')
-      const overlay = document.querySelector('.overlay')
-     
-     btnMenu.addEventListener('click', function() {
-         overlay.classList.add('show-overlay');
-         console.log('you click')
+      const overlay = document.querySelector('.overlay') 
+       btnMenu.addEventListener('click', function() {
+         overlay.style.display="block";
        });
     
        btnclose.addEventListener('click', function() {
-         overlay.classList.remove('show-overlay');
-         console.log('you close')
+         overlay.style.display="none";
        });
      </script>
 
